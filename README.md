@@ -1,6 +1,6 @@
 # Ce référentiel GitHub propose une collection de projets et d'exercices axés sur la programmation en Python.
 
-## General of repositorie
+### General of repositorie
 `python-data_structures`
 ```
 What are lists and how to use them
@@ -16,7 +16,7 @@ What is sequence unpacking
 What is the del statement and how to use it
 ```
 
-## General of repositorie
+### General of repositorie
 `python-exceptions`
 ```
 Why Python programming is awesome
@@ -29,7 +29,7 @@ How to raise a builtin exception
 When do we need to implement a clean-up action after an exception
 ```
 
-## General of repositorie
+### General of repositorie
 `python-hello_world`
 ```
 How to use the Python interpreter
@@ -39,7 +39,7 @@ What are indexing and slicing in Python
 What is the official Python coding style and how to check your code with pycodestyle
 ```
 
-## General of repositorie
+### General of repositorie
 `python-if_else_loops_functions`
 ```
 Why indentation is so important in Python
@@ -58,7 +58,7 @@ What’s a traceback
 What are the arithmetic operators and how to use them
 ```
 
-## General of repositorie
+### General of repositorie
 `python-import_modules`
 ```
 Why Python programming is awesome
@@ -70,7 +70,7 @@ How to prevent code in your script from being executed when imported
 How to use command line arguments with your Python programs
 ```
 
-## General of repositorie
+### General of repositorie
 `python-more_data_structures`
 ```
 Why Python programming is awesome
