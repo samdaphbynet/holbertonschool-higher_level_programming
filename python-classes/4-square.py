@@ -3,6 +3,7 @@
 # 6005@holbertonstudents.com
 """Access and update private attribute"""
 
+
 class Square:
     """
     This class represents a square.
@@ -27,7 +28,7 @@ class Square:
             int: The area of the square.
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """
@@ -36,7 +37,7 @@ class Square:
             int: The size of the square.
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """
