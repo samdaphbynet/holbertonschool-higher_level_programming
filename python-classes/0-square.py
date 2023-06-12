@@ -1,5 +1,9 @@
-#!/user/bin/python3
-"""Class to represent a square."""
-class Square:
-    """A class to represent a square."""
+#!/usr/bin/python3
+# 0-square.py
+# Sidani Samir <6005@holbertonstudents.com>
+"""Define a new class: """
+
+
+class Square(object):
+    """A simple example class"""
     pass
