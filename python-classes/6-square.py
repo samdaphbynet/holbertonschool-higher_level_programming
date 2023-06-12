@@ -16,34 +16,8 @@ class Square:
         args:
             size (int, optional): the size of the square. Defaults to 0.
         """
-        self.__size = size
-        self.__position = position
-
-    def area(self):
-        """
-        Calculates and returns the area of the square
-        Returns:
-            int: the area of the square
-        """
-        return self.__size * self.__size
-
-    @property
-    def position(self):
-        """
-        Calculates and returns the position of the square
-        Returns:
-            tuple: the position of the square
-        """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """
-        Calculates and sets the position of the square
-        args:
-            value (tuple): the position of the square
-        """
-        self.__position = value
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -71,6 +45,37 @@ class Square:
         else:
             self.__size = value
 
+    @property
+    def position(self):
+        """
+        Calculates and returns the position of the square
+        Returns:
+            tuple: the position of the square
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """
+        Calculates and sets the position of the square
+        args:
+            value (tuple): the position of the square
+        """
+        if type(value) is not tuple or len(value) != 2 or \
+           type(value[0]) is not int or value[0] < 0 or \
+           type(value[1]) is not int or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
+
+    def area(self):
+        """
+        Calculates and returns the area of the square
+        Returns:
+            int: the area of the square
+        """
+        return self.__size * self.__size
+
     def my_print(self):
         """
         Print a visual representation of the square.
@@ -81,13 +86,10 @@ class Square:
 
         """
         if self.__size == 0:
-            print("")
+            print()
         else:
             for _ in range(self.__position[1]):
                 print()
             for _ in range(self.__size):
-                for _ in range(self.__position[0]):
-                    print(" ", end="")
-                for _ in range(self.__size):
-                    print("#", end="")
-                print()
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
