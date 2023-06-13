@@ -16,3 +16,7 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+>>> add_integer(1.5, 2.5)
+3
+>>> add_integer(0.5, 0.5)
+0
