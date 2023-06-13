@@ -1,0 +1,14 @@
+Test test_indentation function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("""Lorem elit. commovere? Non hoc: igitur illud:""")
+Lorem elit.
+
+commovere?
+
+Non hoc:
+
+igitur illud:
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
