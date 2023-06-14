@@ -2,5 +2,7 @@
 """
 Module Rectangle is a class that represents a rectangle empty.
 """
-class Rectangle(object):
+
+
+class Rectangle:
     pass
