@@ -108,7 +108,7 @@ class Rectangle:
         """
         rectangal = ""
         if self.width == 0 or self.height == 0:
-            rectangal = "test"
+            rectangal = ""
         else:
             for i in range(self.height):
                 for j in range(self.width):
