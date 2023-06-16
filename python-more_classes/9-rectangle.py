@@ -160,17 +160,17 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        Returns a square rectangle of the given size
+        Returns a new Rectangle instance with width == height == size
 
         Args:
-          size (int): size of the square rectangle
+          size (int): width and height of the square
 
         Returns:
-          Rectangle: square rectangle of the given size
+          Rectangle: new rectangle instance representing a square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         else:
-            return Rectangle(size, size)
+            return cls(size, size)
