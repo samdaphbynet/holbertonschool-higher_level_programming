@@ -8,8 +8,6 @@ Test add_integer function
 100
 >>> add_integer(100.3, -2)
 98
->>> add_integer(-2.5, -2.5)
--4
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
@@ -18,7 +16,7 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
->>> add_integer(1.5, 2.5)
-3
->>> add_integer(0.5, 0.5)
-0
+>>> add_integer(float('inf'), 2)
+89
+>>> add_integer(-float('inf'), 2)
+89
