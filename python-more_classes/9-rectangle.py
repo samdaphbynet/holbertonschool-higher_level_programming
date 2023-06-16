@@ -168,9 +168,4 @@ class Rectangle:
         Returns:
           Rectangle: new rectangle instance representing a square
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            return cls(size, size)
+        return cls(size, size)
