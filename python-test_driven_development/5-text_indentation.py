@@ -22,6 +22,10 @@ def text_indentation(text):
             lines.append(result.strip())
             result = ''
     lines.append(result.strip())
-    for line in lines:
-        print(line)
-        print()
+
+    for i, line in enumerate(lines):
+        print(line, end='')
+        if i < len(lines) - 1:
+            print()
+            print()
+
