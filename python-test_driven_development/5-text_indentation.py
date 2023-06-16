@@ -28,4 +28,3 @@ def text_indentation(text):
         if i < len(lines) - 1:
             print()
             print()
-
