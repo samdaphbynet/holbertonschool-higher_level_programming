@@ -8,6 +8,8 @@ Test add_integer function
 100
 >>> add_integer(100.3, -2)
 98
+>>> add_integer(-2.5, -2.5)
+-4
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
