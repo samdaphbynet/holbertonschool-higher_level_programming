@@ -24,6 +24,8 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
+    if type(matrix) is not list or matrix == []:
+        raise TypeError(error)
     new_matrix = []
     for row in matrix:
         new_row = []
