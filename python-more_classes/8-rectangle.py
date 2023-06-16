@@ -144,6 +144,6 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         else:
             if rect_1.width >= rect_2.width and rect_1.height >= rect_2.height:
-                return rect_1
+                return True
             else:
-                return rect_2
+                return False
