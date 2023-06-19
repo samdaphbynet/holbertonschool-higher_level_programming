@@ -1,15 +1,62 @@
-File: 1-my_list.txt
+# 1-my_list.txt
+# Samir Zidani <6005@holbertonschool.com>
 
-A custom list class.
+=======================
+How to Use 1-my_list.py
+=======================
 
-Public instance method:
-- print_sorted(self): Prints the list in sorted order (ascending sort).
+This module defines a class ``MyList`` that inherits from ``list``.
 
->>> from my_list import MyList
+Instantiation
+=============
 
+>>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
->>> my_list.append(3)
 >>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+
+>>> my_list.append(3)
+>>> my_list.append(0)
+>>> my_list.append(-6)
+>>> my_list.print_sorted()
+[-6, -5, -4, -3, -2, -1, 0, 3]
+
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.append(0)
+>>> my_list.append(0)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 0, 0]
+
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(0)
 >>> my_list.append(2)
 >>> my_list.print_sorted()
-[1, 2, 3]
+[-1, 0, 2]
