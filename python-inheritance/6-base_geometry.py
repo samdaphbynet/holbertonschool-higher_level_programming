@@ -14,4 +14,4 @@ class BaseGeometry:
         Public instance method:
             that raises an Exception with the message
         """
-        raise NotImplementedError("Area() is not implemented")
+        raise Exception("Area() is not implemented")
