@@ -1,0 +1,23 @@
+Test the integer_validator method of the BaseGeometry class.
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> geometry = BaseGeometry()
+>>> geometry.integer_validator('width', 10)
+10
+>>> geometry.integer_validator('height', -5)
+Traceback (most recent call last):
+    ...
+ValueError: height must be greater than 0
+>>> geometry.integer_validator('length', 'abc')
+Traceback (most recent call last):
+    ...
+TypeError: length must be an integer
+>>> geometry.integer_validator('distance', 0)
+Traceback (most recent call last):
+    ...
+ValueError: distance must be greater than 0
+
+>>> geometry.integer_validator('distance', "test")
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
