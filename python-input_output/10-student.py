@@ -36,8 +36,8 @@ class Student:
         Returns:
             dict: A dictionary representing the Student instance.
         """
-        if attrs is None:
+        if attrs is None or not isinstance(attrs, list):
             return self.__dict__
         else:
-            return {key: value for key, value in self.__dict__.items()
-                    if key in attrs}
+            return {attr: getattr(self, attr) for attr in attrs
+                    if attr in self.__dict__}
