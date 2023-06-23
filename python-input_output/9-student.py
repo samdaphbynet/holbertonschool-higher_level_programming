@@ -5,17 +5,13 @@ class Student that defines a student by:
     Instantiation : first_name, last_name and age
     Public method : def to_json(self):
 """
-class_to_json = __import__("8-class_to_json").class_to_json
+class_to_json = __import__('8-class_to_json').class_to_json
 
 
 class Student:
     """
     A class representing a Student.
     """
-    first_name = ""
-    last_name = ""
-    age = 0
-
     def __init__(self, fisrt_name, last_name, age):
         """
         Initialize a Student instance.
