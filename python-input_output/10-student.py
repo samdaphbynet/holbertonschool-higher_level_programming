@@ -5,7 +5,6 @@ class Student that defines a student by:
     Instantiation : first_name, last_name and age
     Public method : def to_json(self, attrs=None):
 """
-import json
 
 
 class Student:
@@ -36,7 +35,7 @@ class Student:
         Returns:
             dict: A dictionary representing the Student instance.
         """
-        if attrs is None or not isinstance(attrs, list):
+        if not isinstance(attrs, list):
             return self.__dict__
         else:
             return {attr: getattr(self, attr) for attr in attrs
