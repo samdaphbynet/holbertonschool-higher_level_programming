@@ -122,7 +122,7 @@ class Rectangle(Base):
             None
         """
         if not isinstance(x, int):
-            raise TypeError("x must be integer")
+            raise TypeError("x must be an integer")
         elif x < 0:
             raise ValueError("x must be >= 0")
         else:
@@ -150,7 +150,7 @@ class Rectangle(Base):
             None
         """
         if not isinstance(y, int):
-            raise TypeError("y must be integer")
+            raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be >= 0")
         else:
