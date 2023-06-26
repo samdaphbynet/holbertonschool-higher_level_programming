@@ -173,11 +173,8 @@ class Rectangle(Base):
         with a height and width specified by
         the object's attributes.
         """
-        for i in range(self.x):
-            if i <= 0:
-                continue
-            else:
-                print("\n")
+        for _ in range(self.x):
+            print()
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
 
