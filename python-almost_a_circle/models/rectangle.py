@@ -158,7 +158,11 @@ class Rectangle(Base):
 
     def area(self):
         """
-        area: the public method that return the area value
-            of Rectangle instance
+        This function calculates the area of a rectangle
+        using its width and height.
+
+        Return: The function `area` is returning the product
+                of the `width` and `height` attributes of the
+                object.
         """
         return self.width * self.height
