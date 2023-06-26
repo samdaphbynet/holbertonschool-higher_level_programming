@@ -168,5 +168,12 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """
+        This function displays a rectangle made of "#" characters
+        with a height and width specified by
+        the object's attributes.
+        """
         for i in range(self.height):
-            print("#" * self.width)
+            for j in range(self.width):
+                print("#", end="")
+            print()
