@@ -88,7 +88,7 @@ class Base:
         This function creates an instance of a class
         (either Rectangle or Square) and updates its
         attributes using a dictionary.
-        
+
         :param cls: The parameter `cls` refers to the
         class that the method is being called on. It is a
         convention to use `cls` instead of `self` when defining
