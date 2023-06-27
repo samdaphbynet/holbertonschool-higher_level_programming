@@ -15,14 +15,13 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.__size = size
 
-    @property
-        
+    @property 
     def size(self):
         """
         This is a Python property method that returns the value of the "width" attribute as the "size".
         :return: The `size` property is returning the value of the `width` attribute of the object.
         """
-        return self.width
+        return self.__size
 
     @size.setter
     def size(self, value):
