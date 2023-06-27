@@ -29,3 +29,21 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        The function "to_json_string" returns a list of 
+        dictionaries as a JSON string, or an empty list if
+        the input is None.
+        
+        Param list_dictionaries: A list of dictionaries 
+        that needs to be converted to a JSON string
+        Return: If the input `list_dictionaries` is `None`, 
+        an empty list is returned. Otherwise, the input
+        `list_dictionaries` is returned as is.
+        """
+        if list_dictionaries is None:
+            return []
+        else:
+            return list_dictionaries
