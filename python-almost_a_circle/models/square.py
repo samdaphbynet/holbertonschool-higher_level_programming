@@ -15,21 +15,25 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.__size = size
 
-    @property 
+    @property
     def size(self):
         """
-        This is a Python property method that returns the value of the "width" attribute as the "size".
-        :return: The `size` property is returning the value of the `width` attribute of the object.
+        This is a Python property method that returns the
+        value of the "width" attribute as the "size".
+        :return: The `size` property is returning the value of
+        the `width` attribute of the object.
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        This is a setter method in Python that sets the width and height of an object to a given integer
+        This is a setter method in Python that sets
+        the width and height of an object to a given integer
         value.
-    
-        param value: The value that is being set for the size attribute of an object
+
+        param value: The value that is being set for the
+        size attribute of an object
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -39,10 +43,13 @@ class Square(Rectangle):
 
     def __str__(self):
         """
-        This function returns a string representation of a Square object, including its ID, coordinates,
+        This function returns a string representation of a Square object,
+        including its ID, coordinates,
         and height.
-        :return: The `__str__` method is returning a string representation of a `Square` object. The
-        string includes the object's `id`, `x` and `y` coordinates, and `height`. The format of the
+        return: The `__str__` method is returning a string representation
+        of a `Square` object. The
+        string includes the object's `id`, `x` and `y` coordinates,
+        and `height`. The format of the
         string is "[Square] (id) x/y - height".
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
