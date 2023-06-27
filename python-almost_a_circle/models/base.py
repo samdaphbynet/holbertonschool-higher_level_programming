@@ -70,7 +70,6 @@ class Base:
     def from_json_string(json_string):
         """
         The function converts a JSON string to a Python object.
-        
         Param json_string: A string containing JSON-formatted data
         Return: If the `json_string` parameter is `None` or an empty string,
         an empty list is returned.
