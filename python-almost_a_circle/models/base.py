@@ -59,6 +59,8 @@ class Base:
         Return: None
         """
         filename = cls.__name__ + ".json"
+        if list_objs is None:
+            list_objs = []
         to_dict = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(to_dict)
         with open(filename, "w") as f:
