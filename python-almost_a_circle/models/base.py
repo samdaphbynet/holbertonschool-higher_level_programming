@@ -65,3 +65,20 @@ class Base:
         json_string = cls.to_json_string(to_dict)
         with open(filename, "w") as f:
             f.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        The function converts a JSON string to a Python object.
+        
+        Param json_string: A string containing JSON-formatted data
+        Return: If the `json_string` parameter is `None` or an empty string,
+        an empty list is returned.
+        Otherwise, the method returns the result of parsing the `json_string`
+        using the `json.loads()`
+        method.
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
