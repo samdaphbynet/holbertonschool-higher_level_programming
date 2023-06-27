@@ -81,3 +81,27 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        This function creates an instance of a class
+        (either Rectangle or Square) and updates its
+        attributes using a dictionary.
+        
+        :param cls: The parameter `cls` refers to the
+        class that the method is being called on. It is a
+        convention to use `cls` instead of `self` when defining
+        class methods
+        :return: An instance of the class (either Rectangle,
+        Square, or another class) with attributes
+        updated based on the input dictionary.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            dummy = cls()
+        dummy.update(**dictionary)
+        return dummy
