@@ -48,3 +48,22 @@ class Square(Rectangle):
         string is "[Square] (id) x/y - height".
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
+
+    def update(self, *args, **kwargs):
+        """
+        The function updates the attributes of an object based on either
+        positional arguments or keyword
+        arguments.
+        """
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.size = args[1]
+            if len(args) >= 3:
+                self.x = args[2]
+            if len(args) >= 4:
+                self.y = args[3]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
