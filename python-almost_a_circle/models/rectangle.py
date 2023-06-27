@@ -206,3 +206,20 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        This Python function returns a dictionary containing the
+        id, width, height, x, and y attributes
+        of an object.
+        :return: A dictionary containing the attributes
+        "id", "width", "height", "x", and "y" of an
+        object.
+        """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
