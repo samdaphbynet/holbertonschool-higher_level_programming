@@ -67,3 +67,17 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        This Python function returns a dictionary containing
+        the values of id, size, x, and y.
+        :return: A dictionary containing the attributes
+        "id", "size", "x", and "y" of the object.
+        """
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
