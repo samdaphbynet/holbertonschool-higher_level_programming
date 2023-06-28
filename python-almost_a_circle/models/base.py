@@ -105,3 +105,31 @@ class Base:
             dummy = cls()
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        The function `load_from_file` loads data from a JSON file,
+        creates instances of a class using the
+        loaded data, and returns a list of the created instances.
+        
+        Param cls: The parameter `cls` is a reference to the class itself.
+        It is used to access class
+        attributes and methods within the class itself. In this case,
+        it is used to dynamically generate
+        the filename based on the class name
+        Return: The method is returning a list of instances of the class.
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                file_data = file.read()
+        except FileNotFoundError:
+            return []
+        
+        instance_data = cls.from_json_string(file_data)
+        instances = []
+        for data in instance_data:
+            instance = cls.create(**data)
+            instances.append(instance)
+        return instances
