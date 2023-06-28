@@ -112,7 +112,6 @@ class Base:
         The function `load_from_file` loads data from a JSON file,
         creates instances of a class using the
         loaded data, and returns a list of the created instances.
-        
         Param cls: The parameter `cls` is a reference to the class itself.
         It is used to access class
         attributes and methods within the class itself. In this case,
@@ -126,7 +125,7 @@ class Base:
                 file_data = file.read()
         except FileNotFoundError:
             return []
-        
+
         instance_data = cls.from_json_string(file_data)
         instances = []
         for data in instance_data:
