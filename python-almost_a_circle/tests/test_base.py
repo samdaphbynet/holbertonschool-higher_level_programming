@@ -11,7 +11,6 @@ class TestBase_instantiation(unittest.TestCase):
     def test_no_arg(self):
         b1 = Base()
         b2 = Base()
-        b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
 
     def test_three_bases(self):
@@ -142,21 +141,21 @@ class TestBase_to_json_string(unittest.TestCase):
 class TestBase_save_to_file(unittest.TestCase):
     """Unittests for testing save_to_file method of Base class."""
 
-    # @classmethod
-    # def tearDown(self):
-    #     """Delete any created files."""
-    #     try:
-    #         os.remove("Rectangle.json")
-    #     except IOError:
-    #         pass
-    #     try:
-    #         os.remove("Square.json")
-    #     except IOError:
-    #         pass
-    #     try:
-    #         os.remove("Base.json")
-    #     except IOError:
-    #         pass
+    @classmethod
+    def tearDown(self):
+        """Delete any created files."""
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.json")
+        except IOError:
+            pass
 
     def test_save_to_file_one_rectangle(self):
         r = Rectangle(10, 7, 2, 8, 5)
