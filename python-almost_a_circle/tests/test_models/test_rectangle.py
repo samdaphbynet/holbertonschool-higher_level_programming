@@ -49,11 +49,11 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def one_arg_int_n(self):
         r1 = Rectangle(10, 2, 16, 4, -17)
-        self.assertEqual(r6.id, -17)
+        self.assertEqual(r1.id, -17)
 
     def one_arg_int_p(self):
         r1 = Rectangle(10, 2, 16, 4, 34)
-        self.assertEqual(r6.id, 34)
+        self.assertEqual(r1.id, 34)
 
     def str_arg(self):
         r7 = Rectangle(1, 11, 1, 1, "Holberton")
@@ -304,7 +304,7 @@ class TestRectangle_id(unittest.TestCase):
 
     def wrong_id(self):
         with self.assertRaises(NameError):
-            Rectangle(10, 2, 1, 1, fdfdfdfd)
+            Rectangle(10, 2, 1, 1, "fdfdfdfd")
 
     def id_str(self):
         r = Rectangle(3, 2, 5, 7, "Hello")
