@@ -30,7 +30,8 @@ if __name__ == '__main__':
     # Display all values in the table
     # of database where name matches the argument
     for row in rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
 
     # Close the cursor and database connection
     cursor.close()
