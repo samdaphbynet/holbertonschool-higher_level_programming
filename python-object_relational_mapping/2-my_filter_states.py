@@ -18,7 +18,11 @@ if __name__ == '__main__':
     # Create a cursor object to execute queries
     cursor = db.cursor()
 
-    cursor.execute("""SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC""".format(sys.argv[4]))
+    """
+    Execute the query to display same values with using format()
+    """
+    cursor.execute("""SELECT * FROM states WHERE name = '{}'
+                   ORDER BY states.id ASC""".format(sys.argv[4]))
 
     # Fetch all the rows
     rows = cursor.fetchall()
