@@ -28,3 +28,9 @@ if __name__ == '__main__':
     # Add the new State object to the session and commit the transaction
     session.add(state)
     session.commit()
+
+    query = session.query(State).order_by(State.id.desc()).first()
+
+    print("{}".format(query.id))
+
+    session.close()
